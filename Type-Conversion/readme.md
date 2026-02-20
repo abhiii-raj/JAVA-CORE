@@ -70,3 +70,7 @@ Whenever we are dealing with some expression then this concept come into picture
         -storing it in a byte is not possible
 
 ## Rule for type promotion
+1. byte, short and char values are promoted to int
+2. if one operand is long , the whole expression will become long.
+3. if one operand is float , entire expression will become float.
+4. If one operand is double ,  entire expression is double.
