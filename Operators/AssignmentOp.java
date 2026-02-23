@@ -1,6 +1,6 @@
 public class AssignmentOp {
     public static void main(String args[]){
-        //Assignemnt Operators
+        //Assignemnt Operators 
         int a = 10;
         int b = 5;
         
