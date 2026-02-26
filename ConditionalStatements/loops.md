@@ -1,0 +1,1 @@
+when you want some part of code to execute multiple times then loops comes in the picture..
