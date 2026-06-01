@@ -5,7 +5,7 @@ public class TypePromotion {
         short s = 1024;
         int i = 50000;
         float f = 5.67f;
-        double d = .1234; // valid in java
+        double d = .1_234; // valid in java
 
         double result = (f * b) + (i / c) - (d * s);
 
