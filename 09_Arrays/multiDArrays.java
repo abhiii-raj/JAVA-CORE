@@ -28,6 +28,22 @@ public class multiDArrays {
             System.out.println();
         }
 
+        //memeory represention of 2-d arrays
+        /*
+                ________________________
+               |_______|_______|________|
+                  |    _________________________
+                   -> |_______|_______|________|
+                for all the cells
+        */
+
+
+        // different length of 2-d arrays
+        int mat[][] = new int[3][];
+        mat[0] = new int[2];
+        mat[1] = new int[3];
+        mat[2] = new int[4];
+
         
     }    
 }
