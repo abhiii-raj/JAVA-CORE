@@ -44,6 +44,13 @@ public class multiDArrays {
         mat[1] = new int[3];
         mat[2] = new int[4];
 
-        
+        // conceptual representation
+        /*
+         ___________
+        |_____|_____|____
+        |_____|_____|____|___
+        |_____|_____|____|___|
+         
+        */
     }    
 }
