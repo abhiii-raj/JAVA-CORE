@@ -1,0 +1,15 @@
+                    Throwable
+                    |
+            ------------------------------------
+        Error                      Exception
+        |-StackOverFlowError            |
+        |-OutOfMemoryError              |
+                            ----------------------------------
+                            |                                |
+                        CompileTime Exception           Runtime Exception
+                        |-IOException                     |-ArithmeticException
+                        |-SQLException                    |-NullPointerException
+                        |-ClassNotFoundException          |-IndexOutOfBoundException
+                                                          |-IllegalArgumentException
+                                                          |-IllegalStateException
+                                                          |-
