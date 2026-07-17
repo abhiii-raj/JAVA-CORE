@@ -1,0 +1,18 @@
+           [NEWSTATE]----------------(start)-----------[RUNNABLE------(run)-------RUNNING]---------------[TERMINATED]
+     (declare and memory allocation)                 /          |    |                  \                (thread finishes its execution)
+                                                    /     notify()   |join()             \ use of overloaded methods
+                                                   /            |    |wait()              \    sleep(time), join(time), wait(time)
+                                                  /             |    |                     \        
+                                            [BLOCKED]          [WAITING]             [TIMED-WAITING]
+
+
+
+
+
+sleep(miiliseconds) -> put a thread in timed waiting for specified time -> throws Interrupted excetion
+join() / join(milliseconds) - non-static method -> th Interrupted exception
+yield() -> static method 
+interrupt() -> non-static method
+isAlive() -> non static member -> returns true if the thread is in [newx -----terminate]
+currentThread() -> gets the reference of the current thread that is running and based on this call
+
