@@ -1,0 +1,31 @@
+HOW LOCK INTERNALLY WORKS
+    
+    [OBJECT]
+        |
+        |--Lock : {
+                    ownerThread: NULL
+                    isLocked: false
+                    waitingQueue: []
+                    contains the thread which has been blcoked.           
+                  }
+
+
+        if(obj.lock.isLocked == false){
+            obj.lock.isLocked = true;
+            obj.lock.ownerThread = Thread.currentThread().getName()
+        }   
+        else{
+            //someone is already inside
+            obj.lock.waitingQueue.add(Thread.currentThread().getName());
+        }
+
+
+        [This if block seems to be check-then-act condition]
+        Suppose a thread check the condition and initially isLocked of that object is false and it enters into the if block and before hitting isLocked contect switch of the thread is happend
+        then for another thread isLocked is till falseand it enters into the if block..
+
+        but this things will not going to be happen becuase this if block is atomic and ensured by the CAS 
+
+        synchonised 
+           |--Overhead
+           |--slow

@@ -1,0 +1,54 @@
+1. RACE CONDITION
+    Multithreaded codes are non-deterministic, and can lead to race-codintion
+
+Atomicity
+    Any operation that either happens completely or not at all.
+    if the problem for atmoicity is solved then the problem for race condtion will also be solved
+
+    Solution:- Synchronised Block, Atomic Integer
+
+Atomic operation
+    Assignment
+        int x = 2;
+        Student s1 = new Student();
+
+Non-Atomic 
+    Increment/Decrement
+    Compound Statement => x = y + z
+
+    check then act 
+    if(bal >= amt) bal -= amt;
+
+    READ VALUE FROM MEMORY (READ)
+    INCREMENT THE VALUE (UPDATE)
+    STORE THE VALUE (WRITE)
+
+
+2. VISIBILTY
+    Imaginne you have two thread and one thread updates a variable and another thread does not see the updated VALUE.
+    VISIBILTY problem can be solved by volatile keyword.
+    but can also be solved using 
+    [Synchronised] keyword critical section ke area ko lock kar deta hai and allow karta hai ki ek baar mein ek hi thread andar aaye
+    jo bhi lock in , lock out hota hai toh cache flush out ho jaati hai , aur read hamesha ram se hoti hai 
+
+    Into the while loop when we print the thing then things get executed because println andar se Synchronise use karti hai..
+
+
+3. ORDERING
+    Sequence in which instructions are executed.
+    int a = 1;
+    int b = 2;
+
+    kadwa sach inka execution jvm kaise bhi kar sakta hai, like b pehle ho jaye aur a baad mein, based on compiler optimisation + cpu reordering 
+
+
+THREAD INTERFERENCE
+    When the execution of one thread interrupted by the another thread
+    is called thread interference.
+    It can lead to data inconsistency.
+
+    Non atomic operation
+    Shared resources
+    Race condition
+    Order / Visibility
+
