@@ -4,9 +4,9 @@ public class ThreadPriority {
             System.out.println("custom thread ");
         });
 
-        System.out.println(t1.getPriority());
+        System.out.println(t1.getPriority()); // 5
         t1.setPriority(10);
-        System.out.println(t1.getPriority());
+        System.out.println(t1.getPriority()); //10
     }
 }
 

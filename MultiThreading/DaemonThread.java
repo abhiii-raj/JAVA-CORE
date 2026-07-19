@@ -23,7 +23,7 @@ public class DaemonThread {
 /*
     User threads, Daemon Threads
     Daemon threads -> background running threads 
-    --> stop immediately when the main thread is complted
+    --> stop immediately when the main thread is completed
 
     Garbage collection --> Daemon thread
 

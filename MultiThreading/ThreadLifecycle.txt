@@ -9,10 +9,9 @@
 
 
 
-sleep(miiliseconds) -> put a thread in timed waiting for specified time -> throws Interrupted excetion
-join() / join(milliseconds) - non-static method -> th Interrupted exception
+sleep(milliseconds) -> put a thread in timed waiting for specified time -> throws Interrupted excetion
+join() / join(milliseconds) - non-static method -> throws Interrupted exception
 yield() -> static method 
 interrupt() -> non-static method
 isAlive() -> non static member -> returns true if the thread is in [newx -----terminate]
 currentThread() -> gets the reference of the current thread that is running and based on this call
-
