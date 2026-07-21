@@ -13,7 +13,7 @@ public class Solution4 {
 class Bank{
     Object lock1 = new Object();
     Object lock2 = new Object();
-    
+
     public void deposit(){
         synchronized(lock1){
             System.out.println("Deposit logic");

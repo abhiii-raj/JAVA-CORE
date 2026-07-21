@@ -6,7 +6,7 @@ HOW LOCK INTERNALLY WORKS
                     ownerThread: NULL
                     isLocked: false
                     waitingQueue: []
-                    contains the thread which has been blcoked.           
+                    contains the list of thread which has been blocked.           
                   }
 
 

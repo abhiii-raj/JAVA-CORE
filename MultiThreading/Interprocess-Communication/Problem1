@@ -1,0 +1,12 @@
+[Producer & Consumer Problem]
+
+                             __________
+            PRODUCER ------- |________|----------CONSUMER
+                            BOX(CONTAINER)
+
+As we know that multithreaded codes are non deterministic in nature
+1. Consumer tries to consume NULL value;
+2. Producer produes a value and consumer nahi 
+    chale and then producer phir se   
+    phir se update kar de value ko
+                            

@@ -19,7 +19,6 @@ public class Solution3 {
         t2.start();
         
         // this enusre main thread waits until both the worker thread finishes
-        
         t1.join();
         t2.join();
 

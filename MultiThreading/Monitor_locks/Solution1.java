@@ -12,6 +12,8 @@ public class Solution1 {
 
         t1.start();
         t2.start();
+        
+        // this ensure main thread waits until both the worker thread finishes
         t1.join();
         t2.join();
 

@@ -1,0 +1,10 @@
+[Problems with synchronised block]
+    -- not control over lock
+    -- no timeout
+    -- no fairness
+
+[TYPES OF LOCKS]
+    -- reentrantLock
+    -- readwriteLock
+    -- Semaphores
+    -- StampedLock

@@ -1,0 +1,20 @@
+Thread Communication(Problem)
+    |-- Shared Resources (jiske wajah se problem aa rhi hai)
+        pura ka pura box(item)
+
+    |-- Condition (Jiske aadahr per problem aa rhi hai)
+        box has item or not
+
+    |-- Waiting (jiske wajah se wait karna parega)
+        consumer should wait if item exist
+        Producer should wait if item exist is already
+
+
+    wait()
+    |- thread apne aap ko pause kar leti hai
+            |-- relesae the lock that has been acquired
+                        |--- and goes into waiting state
+
+    and agar aapko mujhe nikalana hai toh kisi thred ko call karna parega notify(), notifyAll()
+
+    Then thread comes from WAITING ----> RUNNABLE
