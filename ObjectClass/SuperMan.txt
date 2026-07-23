@@ -1,0 +1,20 @@
+Object class 
+   -> java.lang
+   -> Parent of all the class that exists in the java
+   -> all class inherits Object class
+
+
+[IMPORTANT METHODS]
+    toString()  -> returns the string form of any object.
+                -> classes has to override this method
+    equals()
+    getClass()
+    hashCode()
+
+    clone()
+
+    finalize()
+    
+    wait()
+    notify()
+    notifyAll()
