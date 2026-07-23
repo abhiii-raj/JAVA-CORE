@@ -1,0 +1,49 @@
+1. ThreadCreation
+    --extending thread class
+    --implementing runnable interface
+
+2. Which is more profitable
+    --By implementing using runnable interface
+        Seperation of concern
+        Reusability 
+        Multiple inheritance
+
+3. Thread.currentThread.getName();
+    Thread.currentThread.getId()
+    What happens when we call the run method explicitly -- gets the reference for the main thread
+    What happens when we call start method multiple times -- gets IllegalStateException
+
+4. Non-deterministic nature of threads -- primarily due to OS + cpu optimisation
+    -- scheduling function algorithm
+    -- system load
+    -- thread creation
+    -- multicore processors
+
+5. Thread lifecycle [t1.getState()]
+    --NEW , RUNNABLE , WAITING, BLOCKED ,TIMED WAITING, TERMINATED
+
+6. [JAVA THREAD METHODS]
+sleep(ms) - > makes a thread to go from runnable state to timed waiting
+yield() -> set the thread aside and gives cpu time to the other thread of same priority (only like a suggestion to the os)
+interrupt() -> sends a signal to the thread that it should stop doing 
+                what it is doing
+                -- isInterrupted() -> return the value of the interrupt flag
+                -- interrupted() -> return the value of the interrupt flag
+                                    and also sets the interrupt flag as default
+
+make the state of any thread to TIMED WAITING 
+    --sleep(ms), join(ms), wait(ms)
+isAlive() -> return true if the thread state is between [new --- terminated]
+
+currentThread() -> provides reference to the current running thread
+getPriority() -> returns an integer value depicting the priority of the thread
+setPriority(1/5/10) -> set's a proirity for a thread 
+
+7. [PROBLEMS IN MULTI-THREADING]
+    [RACE-CONDITION]
+    final state depends on the order of execution of threads
+        int count = 0;
+        t1 = count++ -> 10000
+        t2 = count++ -> 10000
+        count < 20000
+ 

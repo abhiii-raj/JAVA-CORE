@@ -6,7 +6,6 @@ public class Thread2 {
     }
 }
 
-
 class MyThread implements Runnable{
     @Override
     public void run(){

@@ -1,15 +1,41 @@
-                    Throwable
+                 Throwable
                     |
             ------------------------------------
-        Error                      Exception
-        |-StackOverFlowError            |
-        |-OutOfMemoryError              |
-                            ----------------------------------
-                            |                                |
-                        CompileTime Exception           Runtime Exception
-                        |-IOException                     |-ArithmeticException
-                        |-SQLException                    |-NullPointerException
-                        |-ClassNotFoundException          |-IndexOutOfBoundException
-                                                          |-IllegalArgumentException
-                                                          |-IllegalStateException
-                                                          |-
+            Error                      Exception
+            |-StackOverFlowError            |
+            |-OutOfMemoryError              |
+                                ----------------------------------
+                                |                                |
+                            CompileTime Exception           Runtime Exception
+                            |-IOException                     |-ArithmeticException
+                            |-SQLException                    |-NullPointerException
+                            |-ClassNotFoundException          |-IndexOutOfBoundException
+                                                              |-IllegalArgumentException
+                                                              |-IllegalStateException
+                                                              |-ClassCastException
+
+
+
+ArithmeticException
+ -> number / 0;
+ 
+NullPointerException
+ -> String str = null;
+    print(str.length());
+
+IndexOutOfBoundException
+    ->StringIndexOutOfBoundException
+        str.charAt(6); //but string is of length 5
+
+IllegalArgumentException
+    - Thread.sleep(-1500);
+    - Integer num = Integer.parseInt("abc");
+
+ClassCastException
+    Object obj = "Hello"
+    Integer i = (Integer)obj
+
+IllegalStateException
+    Thread t1 = new Thread();
+    t1.start();
+    t1.start();

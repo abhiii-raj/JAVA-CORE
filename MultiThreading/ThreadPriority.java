@@ -13,7 +13,9 @@ public class ThreadPriority {
 
 
 /*
-    priority is just an indication to the os for a thread to give more cpu time to that thread having greater priority but the thread is non-determinitsic in nature
+    priority is just an indication to the os for a thread to give more cpu time to that 
+    thread having greater priority, 
+    but the thread is non-determinitsic in nature
     you cnnot predict the nature of thread running order
 
     Depends on os
@@ -26,5 +28,5 @@ public class ThreadPriority {
     MAX_PRIORITY = 10;
     NORM_PRIORITY = 5; (by default);
 
-    getPriority() -> int value (static function)
+    getPriority() -> int value (non-static function)
 */

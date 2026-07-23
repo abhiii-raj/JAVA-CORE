@@ -1,5 +1,6 @@
 public class Thread5 {
-    public static void main(String args[]){
+    public static void main(String args[]) throws InterruptedException{
+        
         Thread t1 = new Thread(() -> {
             for(int i = 0 ; i <= 100 ;i++){
                 if(i % 2 == 0){
@@ -15,9 +16,14 @@ public class Thread5 {
                 }
             }
         });
+
         System.out.println("Non-Determinsim nature of Threads");
         t1.start();
         t2.start();
+        
+        // t1.join();
+        // t2.join();
+        // System.out.println("Thread ends");
     }
 }
 

@@ -1,0 +1,3 @@
+A StackTrace (or stack trace) is a diagnostic report that lists the sequence of active function or method calls leading up to a specific point in program execution, typically an error or crash.  It acts as a "breadcrumb trail," allowing developers to retrace the program's steps to identify the root cause of a failure. 
+
+Core Components

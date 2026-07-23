@@ -1,0 +1,1 @@
+When an exception occurs, detect it and handle it and continues execution

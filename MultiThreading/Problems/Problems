@@ -1,9 +1,9 @@
 1. RACE CONDITION
-    Multithreaded codes are non-deterministic, and can lead to race-codintion
+    Multithreaded codes are non-deterministic, and can lead to race-codintion.
 
 Atomicity
     Any operation that either happens completely or not at all.
-    if the problem for atmoicity is solved then the problem for race condtion will also be solved
+    if the problem for atmoicity is solved then the problem for race condtion will also be solved.
 
     Solution:- Synchronised Block, Atomic Integer
 
@@ -19,13 +19,17 @@ Non-Atomic
     check then act 
     if(bal >= amt) bal -= amt;
 
-    READ VALUE FROM MEMORY (READ)
-    INCREMENT THE VALUE (UPDATE)
-    STORE THE VALUE (WRITE)
+        READ VALUE FROM MEMORY (READ)
+        INCREMENT THE VALUE (UPDATE)
+        STORE THE VALUE (WRITE)
 
 
 2. VISIBILTY
     Imaginne you have two thread and one thread updates a variable and another thread does not see the updated VALUE.
+
+                t1 --> [ cache ] ------- [ RAM ]                
+                t2 --> [ cache ] 
+                
     VISIBILTY problem can be solved by volatile keyword.
     but can also be solved using 
     [Synchronised] keyword critical section ke area ko lock kar deta hai and allow karta hai ki ek baar mein ek hi thread andar aaye
@@ -36,11 +40,10 @@ Non-Atomic
 
 3. ORDERING
     Sequence in which instructions are executed.
-    int a = 1;
-    int b = 2;
+            int a = 1;
+            int b = 2;
 
     kadwa sach inka execution jvm kaise bhi kar sakta hai, like b pehle ho jaye aur a baad mein, based on compiler optimisation + cpu reordering 
-
 
 THREAD INTERFERENCE
     When the execution of one thread interrupted by the another thread
@@ -52,3 +55,8 @@ THREAD INTERFERENCE
     Race condition
     Order / Visibility
 
+Problems for Data inconsistency can be solved using
+    1.Synchronised block/method
+    2.volatile keyword -> so that thread read value directly from the MEMORY
+    3.Atmoic integer
+    4.Proper locking mechanism.

@@ -1,0 +1,35 @@
+Try-with-resources is a feature introduced in Java 7 that simplifies resource management by automatically closing resources declared within the try statement.  It eliminates the need for explicit finally blocks to close resources like files, database connections, or network sockets. 
+
+How It Works
+The try-with-resources statement requires that any resource declared within the parentheses must implement the AutoCloseable interface (or its sub-interface Closeable).  When the try block exits—either normally or due to an exception—the close() method is automatically invoked on each resource in reverse order of their declaration. 
+
+Syntax Example
+try (FileInputStream fis = new FileInputStream("file.txt");
+     BufferedReader br = new BufferedReader(new InputStreamReader(fis))) {
+    String line = br.readLine();
+    System.out.println(line);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+
+Custom Resources with AutoCloseable
+You can create custom resources by implementing the AutoCloseable interface:
+
+public class CustomResource implements AutoCloseable {
+    public void doWork() {
+        System.out.println("Working...");
+    }
+    
+    @Override
+    public void close() throws Exception {
+        System.out.println("Cleaning up resources...");
+    }
+}
+
+// Usage
+try (CustomResource resource = new CustomResource()) {
+    resource.doWork();
+} catch (Exception e) {
+    e.printStackTrace();
+}

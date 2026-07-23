@@ -55,7 +55,7 @@ class Test{
 
 /*
     synchronised keyword method per lock nahi lagata
-    class ke object per lagata hai  
+    class ke object per lagata hai.
 
     Every object in the java has Internal lock and maintained by JVM
 */

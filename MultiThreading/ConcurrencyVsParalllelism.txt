@@ -1,0 +1,6 @@
+Concurrency vs. Parallelism: 
+On a single core, multithreading provides 
+concurrency by rapidly switching between threads (time-slicing), 
+creating the illusion of simultaneous execution.  
+On multi-core processors, 
+threads can run in true parallelism, executing simultaneously on different cores. 

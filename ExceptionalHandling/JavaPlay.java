@@ -7,7 +7,6 @@ public class JavaPlay {
             int b = 0;
             System.out.println(a/b);
             System.out.println("try block ends");
-            
         }
         catch(Exception e){
             System.out.println(e.getMessage());

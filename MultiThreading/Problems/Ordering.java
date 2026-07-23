@@ -1,6 +1,8 @@
 public class Ordering {
-    static volatile int x = 0;
-    static volatile boolean flag = true;
+    // static volatile int x = 0;
+    // static volatile boolean flag = true;
+    static int x = 0;
+    static boolean flag = false;
     public static void main(String args[]){
 
         Thread t1 = new Thread(() -> {
@@ -9,11 +11,12 @@ public class Ordering {
         });
 
         Thread t2 = new Thread(() -> {
-            if(flag){
+            if(!flag){
                 System.out.println(x);
             }
         });
 
+        System.out.println("Threads Created..");
         t1.start();
         t2.start();
     }

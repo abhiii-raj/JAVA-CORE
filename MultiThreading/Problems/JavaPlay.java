@@ -1,36 +1,34 @@
-public class Synchronised {
-    public static void main(String args[]) throws InterruptedException{
-        Counter c1 = new Counter();
-        
+public class JavaPlay {
+    public static void main(String[] args) throws Exception{
+        Resource res = new Resource();
         Thread t1 = new Thread(() -> {
             for(int i = 0 ;i < 10000 ;i++){
-                c1.increment();
+                res.increment();
             }
         });
-
         Thread t2 = new Thread(() -> {
             for(int i = 0 ;i < 10000 ;i++){
-                c1.increment();
+                res.increment();
             }
         });
 
         t1.start();
         t2.start();
-        
+
         t1.join();
         t2.join();
 
-        System.out.println(c1.getCount());
-
+        res.getCount();
     }
 }
 
-class Counter{
-    private int count;
+class Resource{
+    private int count = 0;
     public synchronized void increment(){
         count++;
     }
-    public int getCount(){
-        return count;
+
+    public void getCount(){
+        System.out.println(count);
     }
 }

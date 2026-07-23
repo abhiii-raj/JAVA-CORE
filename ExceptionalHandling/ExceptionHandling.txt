@@ -1,0 +1,16 @@
+Exception handling is a programming mechanism that allows software to respond to anomalous or exceptional conditions during execution, preventing the program from crashing abruptly.  When an error occurs, it disrupts the normal flow of instructions, creating an exception object that contains details about the failure, such as the error type and program state. 
+
+
+The core components of this process typically involve:
+
+Try Block: Encloses code that might generate an exception. 
+Catch/Except Block: Detects and handles the specific exception thrown by the try block. 
+Finally Block: Executes code (usually for cleanup) regardless of whether an exception occurred. 
+Throw Keyword: Explicitly raises an exception when an unexpected condition is detected.
+
+This structure enables graceful recovery, allowing applications to log errors, notify users, or take alternative actions while maintaining system stability and robustness. Common languages like Java, Python, and C++ implement this via try-catch constructs, distinguishing between checked exceptions (handled at compile-time) and unchecked exceptions (handled at runtime).
+
+
+
+JVM Decides everything..
+
