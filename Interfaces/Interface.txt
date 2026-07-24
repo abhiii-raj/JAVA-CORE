@@ -1,0 +1,56 @@
+[Interfaces -> Blueprint for behaviours]
+    All the methods in the interfaces are by default public and abstract
+    if a class implements an interface it shouldn't narrow down the modifier
+
+    All the varibles inside an interface are by default public static final.
+
+    It supports multiple inheritance
+
+    Interface inheritance
+
+    implements -> provides the functionalities
+    extends -> inherits features
+
+[AFTER JAVA 8]
+    by default methods inside the intrface is public and abstract
+    but we can make default methods in interfaces and can provide implementation
+
+[JAVA 8/9]
+    - static methods
+    - default methods
+    - private methods
+    - static & final variable
+
+
+                            [Difference between Interface and Abstract class]
+
+                            
+                 [INTERFACE]                        |               [ABSTRACT]    
+    - Contract                                      |   - Represents family of class
+    - Roles / functionalities /                     |               [Animal] eat();
+      Responsibilities                              |               /  |  \
+                                                    |              /   |   \
+      ex Runnable, Coloneable, Payable              |             /    |    \
+                                                    |          [Dog] [Duck]  [Elephant]
+                                                    |
+    - it doesnt contain normal fields               |  - It can contains normal fields
+        interface A{                                |       class A{
+            public final static int a;              |           int a; 
+        }                                           |       }
+    - no contstructors                              |  - yes contstructors
+    - support multiple inheritance                  |  - no
+
+    [TYPES OF INTERFACES]
+        @FunctionalInterface
+        ->Functional Interfaces 
+                -> Which has only single abstract method
+                -> use in functionalProgramming
+                -> ex Runnable Interface -> run()
+                -> Comparable Interface
+                -> Predictable
+
+        -> Marker Interface
+            those interfaces which are empty doesnt have any methods, fields.
+            just used as a marker
+            ex -> Cloneable, Serializable, RandomAccess
+        
