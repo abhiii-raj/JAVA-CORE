@@ -3,6 +3,7 @@ public class DynamicMethod {
         // Payment p = new CreditCard();
         Payment p = new DebitCard();
         p.pay();
+        
     }
 }
 

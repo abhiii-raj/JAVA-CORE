@@ -53,4 +53,3 @@
             those interfaces which are empty doesnt have any methods, fields.
             just used as a marker
             ex -> Cloneable, Serializable, RandomAccess
-        
